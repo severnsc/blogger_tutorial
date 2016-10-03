@@ -22,7 +22,7 @@
 	
 	<p>
 		<% if @article.image.exists? %>
-			<%= image_tag @article.image.url %>
+			<%= image_tag @article.image.url(:thumb) %>
 		<% end %><br/>
 		<%= f.label :image, "Attach an image" %><br/>
 		<%= f.file_field :image %>
